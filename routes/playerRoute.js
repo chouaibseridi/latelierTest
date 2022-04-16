@@ -7,7 +7,7 @@ playerRouter.get('/players', function(req, res) {
 });
 
 playerRouter.get('/player/:id', function(req, res) {
-    playerController.getPlayer(req, res);
+    playerController.getPlayerById(req, res);
 });
 
 playerRouter.get('/stats', function(req, res) {

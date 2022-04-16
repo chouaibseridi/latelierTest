@@ -13,3 +13,13 @@ exports.getAllPlayers = async (req, res) => {
         res.send({message: err.message});
 });  
 }  
+
+exports.getPlayerById = async (req, res) => {
+    await Player.findOne({where: { id: req.params.id }})
+    .then(Player => {
+        res.json(Player);
+    })
+    .catch(err => {
+        res.send({message: err.message});
+    });
+}
