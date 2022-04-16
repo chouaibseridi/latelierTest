@@ -1,3 +1,3 @@
-exports.getAllPlayers = async (req, res) => {
-    await res.json([]);
-}
+exports.getAllPlayers = (req, res) => {
+    res.json([]);
+} 
