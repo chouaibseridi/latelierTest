@@ -27,7 +27,8 @@ exports.getPlayerById = async (req, res) => {
 
 exports.getStats = async (req, res) => {
     const bestCountry = await getBestCountry();
-    res.send(bestCountry);
+    const imc = await calculateAverageIMC();
+    res.send({bestCountry, imc});
 }
 
 const getBestCountry = async () => {
@@ -59,4 +60,18 @@ const calculateWins = (str) => {
         sum += parseInt(str[i]);
     }
     return sum;
+}
+
+const calculateAverageIMC = async () => {
+    return await Player.findAll({
+        attributes: [
+            [sequelize.literal('AVG(((weight) / (height*height))*10)'),'IMC']
+        ]
+        })
+    .then(result => {
+        return result
+    })
+    .catch(err => {
+        return(err.message)
+    });  
 }
