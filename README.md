@@ -1,5 +1,17 @@
 # latelierTest
 
+Avant tout: 
+
+    Pour rapprocher ce test beaucoup plus aux conditions réelles de développement, j'ai choisis de transformer le modèle de donnée proposé dans le "dataset.json" en une table de base de données MySQL (table player au lieu d'un tableau d'objets). 
+
+    Donc au lieu d'utiliser une approche facile de recherche et parcour d'array, j'ai rajouté un concept d'interrogation de base de données. Donc toutes les requetes vont interroger la base de données pour récupérer les résultats à travers les différents url de l'api.
+
+    J'ai utilisé clever-cloud.com pour un hébergement gratuit de bdd mysql
+    J'ai utilisé heroku pour le déploiement de mon api en cloud
+
+***********************************************************************************************
+***********************************************************************************************
+
 Pour tester le code à partir de GIT, il faudra: 
     - cloner le projet en local dans l'emplacement de votre choix
     - ouvrir une invite de commande dans le répertoire de base du projet
