@@ -7,7 +7,7 @@ Pour tester le code à partir de GIT, il faudra:
     - tester les différentes routes comme mentionné ci-dessous
 
 Pour tester le code directment à partir du cloud: 
-    - ouvrir l'adresse suivante : 
+    - ouvrir l'adresse suivante : https://latelier-test.herokuapp.com/
     - tester les différentes routes comme mentionné ci-dessous
 
 Tester les routes et les fonctionnalités: 
