@@ -25,8 +25,8 @@ exports.getAllPlayers = async (req, res) => {
 */
 exports.getPlayerById = async (req, res) => {
     await Player.findOne({where: { id: req.params.id }})
-    .then(Player => {
-        res.json(Player);
+    .then(player => {
+        player !== null ? res.json(player) : res.json({"error": "no player with the id " +req.params.id })
     })
     .catch(err => {
         res.send({message: err.message});
