@@ -12,6 +12,8 @@ Pour tester le code directment à partir du cloud:
 
 Tester les routes et les fonctionnalités: 
     - lancer le navigateur ou bien un outil de test d'API (ex: postman)
-    - entrer l'url: /players pour afficher tout les joueurs
-    - entrer l'url: /player/(id) pour afficher un joueur avec l'id de votre choix (id=17 pour R.Nadal)
-    - entrer l'url: /stats pour affichers les différents calculs demandés
+    - entrer l'url: {baseURI}/players pour afficher tout les joueurs
+    - entrer l'url: {baseURI}/player/(id) pour afficher un joueur avec l'id de votre choix (id=17 pour R.Nadal)
+    - entrer l'url: {baseURI}/stats pour affichers les différents calculs demandés
+
+PS: {baseURI} = localhost:3000 en local et https://latelier-test.herokuapp.com sur le cloud
